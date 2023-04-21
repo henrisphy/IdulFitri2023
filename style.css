@@ -36,6 +36,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .text-animation h1 {
@@ -44,6 +45,45 @@ body {
   text-align: center;
   color: white;
   animation: animate-text 3s ease-in-out infinite;
+}
+
+.stars,
+.stars2,
+.stars3,
+.moon {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: white;
+  opacity: 0.8;
+}
+
+.stars {
+  top: 50%;
+  left: 25%;
+  animation: animate-stars 4s linear infinite;
+}
+
+.stars2 {
+  top: 80%;
+  left: 75%;
+  animation: animate-stars 6s linear infinite;
+}
+
+.stars3 {
+  top: 10%;
+  left: 60%;
+  animation: animate-stars 8s linear infinite;
+}
+
+.moon {
+  top: 5%;
+  left: 5%;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 0 30px #fff;
+  animation: animate-moon 15s ease-in-out infinite;
 }
 
 @keyframes animate-bg {
@@ -64,14 +104,4 @@ body {
     opacity: 1;
     transform: translateX(-50%) rotate(0deg);
   }
-  100% {
-    opacity: 0;
-    transform: translateX(-50%) rotate(45deg);
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .text-animation h1 {
-    font-size: 2rem;
-  }
-}
+  100%

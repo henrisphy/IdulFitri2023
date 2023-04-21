@@ -39,8 +39,8 @@ body {
   flex-direction: column;
 }
 
-.text-animation h1 {
-  font-size: 4rem;
+.greeting {
+  font-size: 6rem;
   font-weight: bold;
   text-align: center;
   color: white;
@@ -98,10 +98,32 @@ body {
 @keyframes animate-text {
   0% {
     opacity: 0;
-    transform: translateX(-50%) rotate(-45deg);
+    transform: translateX(-50%) rotate(-45deg) scale(0.1);
   }
   50% {
     opacity: 1;
-    transform: translateX(-50%) rotate(0deg);
+    transform: translateX(-50%) rotate(-45deg) scale(1.2);
   }
-  100%
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) rotate(-45deg) scale(0.1);
+  }
+}
+
+@keyframes animate-stars {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(200px);
+  }
+}
+
+@keyframes animate-moon {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
